@@ -49,3 +49,4 @@ A full-stack banking application built with **Java Spring Boot** (Backend) and *
     `http://localhost:8080`
 
 ## 📂 Project Structure
+  src ├── main │ ├── java │ │ └── com.example.banksystem │ │ ├── controller # REST API Endpoints (BankController) │ │ ├── model # Data Classes (Account, SavAccount, CurAccount) │ │ └── service # Business Logic (BankService) │ └── resources │ └── static # Frontend Files (index.html, style.css, script.js)
