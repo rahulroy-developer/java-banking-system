@@ -50,3 +50,15 @@ A full-stack banking application built with **Java Spring Boot** (Backend) and *
 
 ## 📂 Project Structure
   src ├── main │ ├── java │ │ └── com.example.banksystem │ │ ├── controller # REST API Endpoints (BankController) │ │ ├── model # Data Classes (Account, SavAccount, CurAccount) │ │ └── service # Business Logic (BankService) │ └── resources │ └── static # Frontend Files (index.html, style.css, script.js)
+## 🔌 API Endpoints
+
+The backend exposes the following RESTful APIs:
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `POST` | `/api/create` | Create a new bank account |
+| `GET` | `/api/balance/{id}` | Fetch account details & balance |
+| `POST` | `/api/deposit` | Deposit funds into an account |
+| `POST` | `/api/withdraw` | Withdraw funds (with balance check) |
+| `POST` | `/api/transfer` | Transfer funds between accounts |
+| `DELETE` | `/api/delete/{id}` | Delete a specific account |
