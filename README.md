@@ -1,60 +1,51 @@
-🏦 Java Banking System
-A full-stack banking application built with Java Spring Boot (Backend) and HTML/CSS/JavaScript (Frontend). This project simulates a real-world banking environment where users can create accounts, perform secure transactions, and manage their profiles.
+# 🏦 Java Banking System
 
-🚀 Features
-User Authentication: Secure login system using Account Number.
+A full-stack banking application built with **Java Spring Boot** (Backend) and **HTML/CSS/JavaScript** (Frontend). This project simulates core banking operations including account creation, secure login, fund transfers, and balance management.
 
-Account Management:
+![Project Status](https://img.shields.io/badge/status-active-success.svg)
+![Java](https://img.shields.io/badge/Java-17-orange.svg)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-green.svg)
 
-Create Savings or Current accounts.
+## 🌟 Features
 
-View real-time balance and account details.
+* **User Account Management:** Create Savings or Current accounts with validation.
+* **Secure Dashboard:** Users must log in with their Account Number to view details.
+* **Banking Operations:**
+    * 💰 **Deposit & Withdraw:** Real-time balance updates.
+    * 💸 **Fund Transfer:** Send money securely between different accounts.
+    * ❌ **Delete Account:** Option to close an account permanently.
+* **Safety Checks:** Prevents overdrafts and ensures valid transfer targets.
+* **Responsive UI:** Modern, clean interface using CSS Grid and Flexbox.
 
-Delete Account functionality for closing accounts.
+## 🛠️ Tech Stack
 
-Transactions:
+* **Backend:** Java 17, Spring Boot (Web, REST API)
+* **Frontend:** HTML5, CSS3, Vanilla JavaScript (Fetch API)
+* **Architecture:** MVC (Model-View-Controller) pattern
+* **Data Storage:** In-Memory (`ArrayList`) for demonstration purposes.
 
-Deposit: Add funds to any account.
+## 🚀 Getting Started
 
-Withdraw: Secure withdrawal with balance checks.
+### Prerequisites
+* Java Development Kit (JDK) 17 or later.
+* Maven.
 
-Transfer: Send money instantly between accounts.
+### Installation & Running
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/yourusername/java-banking-system.git](https://github.com/yourusername/java-banking-system.git)
+    ```
+2.  **Navigate to the project directory**
+    ```bash
+    cd java-banking-system
+    ```
+3.  **Run the Application**
+    You can run it via your IDE (IntelliJ/Eclipse) or command line:
+    ```bash
+    mvn spring-boot:run
+    ```
+4.  **Access the App**
+    Open your browser and visit:
+    `http://localhost:8080`
 
-Dynamic UI: Single-page application (SPA) feel with a responsive dashboard.
-
-🛠️ Tech Stack
-Backend: Java 17, Spring Boot (Web, REST API)
-
-Frontend: HTML5, CSS3, JavaScript (Fetch API)
-
-Data Storage: In-Memory (Java Collections) *
-
-(Note: Data resets when the application restarts. Database integration coming soon!)
-
-⚙️ Installation & Run
-Clone the Repository
-
-Bash
-git clone https://github.com/your-username/java-banking-system.git
-cd java-banking-system
-Run the Backend
-
-Open the project in IntelliJ IDEA or Eclipse.
-
-Run BankSystemApplication.java.
-
-The server will start at http://localhost:8080.
-
-Launch the Frontend
-
-Open your browser and navigate to: http://localhost:8080/index.html
-
-📸 Screenshots
-(You can upload screenshots of your Login Page and Dashboard here later)
-
-🔮 Future Improvements
-[ ] Connect to MySQL/H2 Database for persistent data.
-
-[ ] Add Spring Security for password-based authentication.
-
-[ ] Implement Transaction History logs.
+## 📂 Project Structure
