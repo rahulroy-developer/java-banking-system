@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Banking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="messageBox" class="message-box"></div>
+
+<div class="container" id="login-section">
+    <header>
+        <h1>🏦 Bank System</h1>
+        <p>Please login or register to continue</p>
+    </header>
+
+    <div class="grid-2">
+        <div class="card login-card">
+            <h2>🔑 Access Your Account</h2>
+            <input type="number" id="loginAccNo" placeholder="Enter Account Number">
+            <button class="btn-primary" onclick="login()">Access Dashboard</button>
+        </div>
+
+        <div class="card register-card">
+            <h2>👤 New User? Register</h2>
+            <input type="text" id="regName" placeholder="Full Name">
+            <input type="number" id="regAccNo" placeholder="Desired Account Number">
+            <input type="number" id="regBalance" placeholder="Initial Deposit">
+            <select id="regType">
+                <option value="savings">Savings Account</option>
+                <option value="current">Current Account</option>
+            </select>
+            <button class="btn-success" onclick="createAccount()">Open Account</button>
+        </div>
+    </div>
+</div>
+
+<div class="container hidden" id="dashboard-section">
+    <header class="dash-header">
+        <h1>👋 Welcome, <span id="userGreeting">User</span></h1>
+        <button class="btn-danger small" onclick="logout()">🔒 Logout</button>
+    </header>
+
+    <div class="balance-card">
+        <span>Current Balance</span>
+        <h1 id="dashBalance">$0.00</h1>
+        <p>Account: <span id="dashAccNo">---</span> | Type: <span id="dashType">---</span></p>
+    </div>
+
+    <div class="action-bar">
+        <button class="btn-action" onclick="showSection('deposit')">⬇ Deposit</button>
+        <button class="btn-action" onclick="showSection('withdraw')">⬆ Withdraw</button>
+        <button class="btn-action" onclick="showSection('transfer')">↔ Transfer</button>
+        <button class="btn-action btn-profile" onclick="showSection('profile')">📋 Full Profile</button>
+    </div>
+
+    <div id="action-area" class="card action-card">
+        <h3 id="actionTitle">Select an Action</h3>
+
+        <div id="form-deposit" class="action-form hidden">
+            <input type="number" id="depAmount" placeholder="Amount to Deposit">
+            <button class="btn-success" onclick="performTransaction('deposit')">Confirm Deposit</button>
+        </div>
+
+        <div id="form-withdraw" class="action-form hidden">
+            <input type="number" id="wdAmount" placeholder="Amount to Withdraw">
+            <button class="btn-warning" onclick="performTransaction('withdraw')">Confirm Withdrawal</button>
+        </div>
+
+        <div id="form-transfer" class="action-form hidden">
+            <input type="number" id="targetAcc" placeholder="Target Account Number">
+            <input type="number" id="tfAmount" placeholder="Amount to Transfer">
+            <button class="btn-primary" onclick="performTransaction('transfer')">Send Money</button>
+        </div>
+
+        <div id="form-profile" class="action-form hidden">
+            <div class="profile-details">
+                <p><strong>Account Holder:</strong> <span id="pName"></span></p>
+                <p><strong>Account Number:</strong> <span id="pAccNo"></span></p>
+                <p><strong>Account Type:</strong> <span id="pType"></span></p>
+                <p><strong>Status:</strong> Active</p>
+                <hr>
+                <button class="btn-danger full-width" onclick="deleteAccount()">⚠ Delete My Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
