@@ -33,7 +33,7 @@ A full-stack banking application built with **Java Spring Boot** (Backend) and *
 ### Installation & Running
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/yourusername/java-banking-system.git](https://github.com/yourusername/java-banking-system.git)
+    git clone [https://github.com/rahulroy-developer/java-banking-system.git](https://github.com/yourusername/java-banking-system.git)
     ```
 2.  **Navigate to the project directory**
     ```bash
